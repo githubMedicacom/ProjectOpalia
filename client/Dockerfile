@@ -5,13 +5,15 @@ FROM node:14.17.0
 WORKDIR /client
 
 # Copy package.json and package-lock.json to the container
-COPY client/package*.json ./
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application code to the container
-COPY client/ .
+COPY . .
 
 # Expose the port your frontend application uses
 EXPOSE 5000
+
+CMD [ "npm", "start" ]
