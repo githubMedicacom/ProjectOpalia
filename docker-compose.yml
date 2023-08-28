@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./server
+    container_name: backend
+    working_dir: /var/lib/jenkins/workspace/Pipeline-Project
+    volumes:
+      - ./server:/var/lib/jenkins/workspace/Pipeline-Project
+      - /var/lib/jenkins/workspace/Pipeline-Project/server/node_modules
+    tty: true
+    ports:
+      - "3000:3000"
+    command: npm run start
+
+  frontend:
+    build:
+      context: ./client  # Path to the frontend directory
+    container_name: frontend
+    working_dir: /var/lib/jenkins/workspace/Pipeline-Project
+    volumes:
+      - ./client:/var/lib/jenkins/workspace/Pipeline-Project
+      - /var/lib/jenkins/workspace/Pipeline-Project/client/node_modules
+    tty: true
+    ports:
+      - "5000:5000"
+    command: npm run dev
