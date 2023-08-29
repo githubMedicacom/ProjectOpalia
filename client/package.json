@@ -48,7 +48,7 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "start": "set PORT=8000 && react-scripts --openssl-legacy-provider start",
+    "start": "set PORT=8000 && react-scripts start",
     "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "compile:scss": "sass src/assets/scss/style.scss src/assets/css/style.css",
