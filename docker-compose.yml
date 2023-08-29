@@ -12,7 +12,7 @@ services:
     tty: true
     ports:
       - "3000:3000"
-    command: npm run start
+    command: npm start
 
   frontend:
     build:
@@ -25,4 +25,4 @@ services:
     tty: true
     ports:
       - "5000:5000"
-    command: npm run dev
+    command: npm start
