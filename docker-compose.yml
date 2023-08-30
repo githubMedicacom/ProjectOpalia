@@ -12,7 +12,7 @@ services:
     volumes:
       - /var/lib/jenkins/workspace/Pipeline-Project/server:/var/lib/jenkins/workspace/Pipeline-Project:rw
       - /var/lib/jenkins/workspace/Pipeline-Project/server/node_modules
-    working_dir: /var/lib/jenkins/workspace/Pipeline-Project
+    working_dir: /var/lib/jenkins/workspace/Pipeline-Project/server
 
   frontend:
     build:
@@ -26,4 +26,4 @@ services:
     volumes:
       - /var/lib/jenkins/workspace/Pipeline-Project/client:/var/lib/jenkins/workspace/Pipeline-Project:rw
       - /var/lib/jenkins/workspace/Pipeline-Project/client/node_modules
-    working_dir: /var/lib/jenkins/workspace/Pipeline-Project
+    working_dir: /var/lib/jenkins/workspace/Pipeline-Project/client
